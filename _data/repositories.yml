@@ -1,12 +1,7 @@
 github_users:
-  - torvalds
-  - alshedivat
+  - FateScript
 
 github_repos:
-  - alshedivat/al-folio
-  - twbs/bootstrap
-  - jekyll/jekyll
-  - jquery/jquery
-  - FortAwesome/Font-Awesome
-  - jpswalsh/academicons
-  - mathjax/MathJax
+  - FateScript/CenterNet-better
+  - Megvii-BaseDetection/YOLOX
+  - Megvii-BaseDetection/cvpods

@@ -4,6 +4,7 @@ title: Tensor是如何让你的内存/显存泄漏的
 date: 2022-05-20 11:59:00-0400
 description: 
 categories: deep-learning engineering
+tags: [code,]
 giscus_comments: true
 ---
 
@@ -142,7 +143,9 @@ AutogradMeta* get_autograd_meta(const at::TensorBase& self) {
 
 现在让我们回到数据结构中Graph（图）的概念。在一个自动求导系统中，我们可以将Graph中的[Edge](https://github.com/pytorch/pytorch/blob/v1.10.1/torch/csrc/autograd/edge.h#L14)（边）简单地理解为一个tensor，Graph中[Node](https://github.com/pytorch/pytorch/blob/v1.10.1/torch/csrc/autograd/function.h#L99)（节点）的概念理解为算子。比如在torch里写 `c = a + b`，其实就是表示有一个a 表示的Edge和一个b代表的Edge连接到一个add的Node（节点）上，这个Node又会连接到一个叫做c的Edge上（下面是一个用[mermaid](https://github.com/mermaid-js/mermaid)画的一个示意图，其中Edge用矩形表示，Node用圆表示。不难看出，add就是一个入度为2，出度为1的Node）。
 
-{% include figure.html path="assets/blog/tensor_graph.png" class="img-fluid rounded z-depth-1" %}​
+<div style="text-align: center">
+{% include figure.html path="assets/blog/tensor_graph.png"  caption="c = a + b的图表示" %}​
+</div>
 
 既然我们有了图，那么就需要有一些结构保存一部分基本的图信息，这些基本图信息会在自动求导（autograd）的时候使用。在torch中，AutogradMeta就是包含了诸如tensor的autograd历史、hooks等信息的结构，而导致我们内存/显存泄漏的罪魁祸首也正是这个[AutogradMeta](https://github.com/pytorch/pytorch/blob/v1.10.1/torch/csrc/autograd/variable.h#L190)。
 现在，我们已经知道memory实际上泄漏的是啥了。跳回我们写的code，结合gc机制，想一想问题1你是否知道了答案。

@@ -2,96 +2,63 @@
   type: map
   contents:
     - name: Full Name
-      value: Albert Einstein
+      value: Feng Wang
     - name: Date of Birth
-      value: 14th March 1879
+      value: 15th March 1995
     - name: Languages
-      value: English, German
+      value: Chinese, English
 
 - title: Education
   type: time_table
   contents:
-    - title: PhD
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1905
+    - title: Master's degree
+      institution: Institute of Computing Technology, Chinese Academy of Sciences, China
+      year: 2020
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Federal teaching diploma
-      institution: Eidgenössische Technische Hochschule, Zurich, Switzerland
-      year: 1900
+        - mainly focus on general object detection, computer vision.
+        - also interested in infrastructure for deep learning.
+    - title: Bachelor's degree
+      institution: Jilin University, Jilin, China
+      year: 2017
       description:
-        - Description 1.
-        - Description 2.
+        - Major in computer science and technology.
+        - Study in a special class, Tang Au-chin pilot Class in Computer Sciences.
 
 - title: Experience
   type: time_table
   contents:
-    - title: Professor of Theoretical Physics
-      institution: Institute for Advanced Study, Princeton University
-      year: 1933 - 1955
+    - title: Engineer
+      institution: Megvii
+      year: 2020 - Now
       description:
-        - Description 1.
-        - Description 2.
-        - title: Description 3.
-          contents:
-            - Sub-description 1.
-            - Sub-description 2.
-    - title: Visiting Professor
-      institution: California Institute of Technology, Pasadena, California, US
-      year: 1933
-      description:
-        - Description 1.
-        - Description 2.
-
-    - title: Director
-      institution: Kaiser Wilhelm Institute for Physics, Berlin, Germany.
-      year: 1917-1933
-
-    - title: Professor of Theoretical Physics
-      institution: Karl-Ferdinand University, Prague, Czechoslovakia
-      year: 1911 - 1917
-      description:
-
-    - title: Associate Professor of Theoretical Physics
-      institution: University of Zurich, Zurich, Switzerland
-      year: 1909 - 1911
+        - I mantain the codebase of Megvii's object detection research.
+        - I participated in the design and development of cvpods, YOLOX and BaseDet.
 
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/alshedivat/al-folio">al-folio</a>
-      year: 2015-now
-      description: A beautiful, simple, clean, and responsive Jekyll theme for academics.
+    - title: <a href="https://github.com/FateScript/CenterNet-better">CenterNet-better</a>
+      year: 2020
+      description: An easy to understand and better performance version of CenterNet.
+    - title: <a href="https://github.com/Megvii-BaseDetection/cvpods">cvpods</a>
+      year: 2020
+      description: All-in-one Toolbox for Computer Vision Research.
+    - title: <a href="https://github.com/Megvii-BaseDetection/YOLOX">YOLOX</a>
+      year: 2021
+      description: A high-performance anchor-free YOLO, welcomed by the community.
+    - title: <a href="https://github.com/megvii-research/basedet">BaseDet</a>
+      year: 2022
+      description: An object detection codebase based on MegEngine.
 
 - title: Honors and Awards
   type: time_table
   contents:
-    - year: 1921
+    - year: 2019
       items: 
-        - Nobel Prize in Physics 
-        - Matteucci Medal
-    - year: 2029
-      items: 
-        - Max Planck Medal
-
-- title: Academic Interests
-  type: nested_list
-  contents:
-    - title: Topic 1.
-      items: 
-        - Description 1.
-        - Description 2.
-    - title: Topic 2.
-      items:
-        - Description 1.
-        - Description 2.
+        - ICDAR 2019 Scene Text Detection
+        - Champion
 
 - title: Other Interests
   type: list
   contents:
-    - <u>Hobbies:</u> Hobby 1, Hobby 2, etc.
+    - <u>Hobbies:</u> Photography, Basketball, ACG, etc.
