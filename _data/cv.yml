@@ -37,18 +37,18 @@
 - title: Open Source Projects
   type: time_table
   contents:
-    - title: <a href="https://github.com/FateScript/CenterNet-better">CenterNet-better</a>
-      year: 2020
-      description: An easy to understand and better performance version of CenterNet.
-    - title: <a href="https://github.com/Megvii-BaseDetection/cvpods">cvpods</a>
-      year: 2020
-      description: All-in-one Toolbox for Computer Vision Research.
-    - title: <a href="https://github.com/Megvii-BaseDetection/YOLOX">YOLOX</a>
-      year: 2021
-      description: A high-performance anchor-free YOLO, welcomed by the community.
     - title: <a href="https://github.com/megvii-research/basedet">BaseDet</a>
       year: 2022
       description: An object detection codebase based on MegEngine.
+    - title: <a href="https://github.com/Megvii-BaseDetection/YOLOX">YOLOX</a>
+      year: 2021
+      description: A high-performance anchor-free YOLO, welcomed by the community.
+    - title: <a href="https://github.com/Megvii-BaseDetection/cvpods">cvpods</a>
+      year: 2020
+      description: All-in-one Toolbox for Computer Vision Research.
+    - title: <a href="https://github.com/FateScript/CenterNet-better">CenterNet-better</a>
+      year: 2020
+      description: An easy to understand and better performance version of CenterNet.
 
 - title: Honors and Awards
   type: time_table
