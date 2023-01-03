@@ -6,6 +6,23 @@ description: light in my life
 nav: true
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+《[明朝那些事儿](https://book.douban.com/subject/3674537/)》 — 当年明月
 
-Organize your courses by years, topics, or universities, however you like!
+这就是我想说的，这就是我想通过徐霞客所表达的，足以藐视所有王侯将相，最完美的结束语：**成功只有一个——按照自己的方式，去度过人生**。
+
+《望江南·超然台作》 — 苏轼
+
+春未老，风细柳斜斜。试上超然台上看，半壕春水一城花。烟雨暗千家。  
+寒食后，酒醒却咨嗟。**休对故人思故国，且将新火试新茶。诗酒趁年华**。
+
+《[苏菲的世界](https://book.douban.com/subject/2284311/)》 — 乔斯坦·贾德
+
+如果你没有意识到人终将死去，就不能体会活着的滋味。同样的，如果你不认为活着是多么奇妙而不可思议的事时，你也无法体会认清你必须要死去的事实。
+
+《[文明之光](https://book.douban.com/subject/26275177/)》 — 吴军
+
+我想，世界上很多事情都不应该以“是否很快有回报”来衡量它的意义。
+
+《[钢之炼金术师](https://book.douban.com/subject/1364773/)》 — 荒川弘
+
+不伴随着痛楚的教训没有意义，因为人若无牺牲，就不会有收获。然而，当战胜这痛楚时，人就将获得不屈服于任何事物的坚强之心，是的，钢铁般的心。  
