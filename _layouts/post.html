@@ -40,7 +40,17 @@ layout: default
   </header>
 
   <article class="post-content">
-    {{ content }}
+    <div>
+      <div class="toc">
+        <details>
+          <summary class="toc-summary">Table of Contents</summary>
+          {% toc %}
+        </details>
+      </div>
+      <div id="markdown-content">
+        {{ content }}
+      </div>
+    </div>
   </article>
 
   {%- if site.disqus_shortname and page.disqus_comments -%}
