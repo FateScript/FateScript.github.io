@@ -49,7 +49,7 @@ print(1e100 + -1e100 + 1e-4)  # output: 0.0001
 {% endhighlight %}
 
 
-#### 训练模块
+##### 训练模块
 1. FP16训练/混合精度训练。使用Apex训练混合精度模型，在保存checkpoint用于继续训练的时候，除了model和optimizer本身的state_dict之外，还需要保存一下amp的state_dict，这个在[amp的文档](https://nvidia.github.io/apex/amp.html#checkpointing)中也有提过。（当然，经验上来说忘了保存影响不大，会多花几个iter search一个loss scalar出来）
 2. 多机分布式训练卡死。 @zhangsongyang  遇到的一个坑。场景是rlaunch申请了两个8卡机，然后机器1和机器2用前4块卡做通讯（local rank最大都是4）。可以初始化process group，在使用DDP的时候会卡死。原因在于pytorch在做DDP的时候会猜测一个rank，参考[code](https://github.com/pytorch/pytorch/blob/0d437fe6d0ef17648072eb586484a4a5a080b094/torch/csrc/distributed/c10d/ProcessGroupNCCL.cpp#L1622-L1630)。对于上面的场景，第二个机器上因为存在卡5到卡8，而对应的rank也是5到8，所以DDP就会认为自己需要同步的是卡5到卡8，于是就卡死了。
 3. 在使用AMP的时候，使用Adam/AdamW优化器之后NaN，之前没有任何异常现象，通常是optimizer里面的eps的问题，调整一下eps的数值就好了（比如1e-3），因为默认的eps是1e-8，在fp16下浮点运算容易出NaN
