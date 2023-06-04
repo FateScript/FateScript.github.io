@@ -1,7 +1,7 @@
 ---
 layout: post
 title: LLMs as Markov Chain
-date: 2023-06-04 11:59:00-0400
+date: 2023-06-03 11:59:00-0400
 description: 
 categories: engineering
 tags: [math, LLM, ]
