@@ -5,6 +5,7 @@ date: 2023-06-03 11:59:00-0400
 description: 
 categories: engineering
 tags: [math, LLM, ]
+og_image: /assets/blog/baby_gpt_init.png
 giscus_comments: true
 toc: true
 ---
