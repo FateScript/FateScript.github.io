@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 我在贵司这三年
-date: 2023-07-23 11:59:00-0400
+date: 2023-09-01 11:59:00-0400
 description: 人生短暂，故事长存
 categories: reflection
 tags: [reflection, ]
