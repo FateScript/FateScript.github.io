@@ -53,6 +53,26 @@ layout: default
     </div>
   </article>
 
+  <!-- prev and next blog -->
+  {% if page.previous or page.next %}
+    <div class="pagenav">
+      <div class="previous-post">
+        {% if page.next %}
+          <span>⬅️</span>
+          <a href="{{ page.next.url }}" class="smaller-title"><strong>{{ page.next.title }}</small></a>
+        {% endif %}
+      </div>
+
+      <div class="next-post">
+        {% if page.previous %}
+          <span>➡️</span>
+          <a href="{{ page.previous.url }}" class="smaller-title"><strong>{{ page.previous.title }}</small></a>
+        {% endif %}
+      </div>
+    </div>
+  {% endif %}
+
+  <!-- comments -->
   {%- if site.disqus_shortname and page.disqus_comments -%}
     {% include disqus.html %}
   {%- endif %}

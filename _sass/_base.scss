@@ -752,6 +752,7 @@ progress {
   margin: 0 2px 40px;
   border: 1px solid black;
   background: rgb(178, 180, 186);
+  color: var(--global-text-color); /* Use global text color */
   border-radius: 8px;
   padding: .4em;
   font-size: 15px;
@@ -760,9 +761,56 @@ progress {
     display: inline;
     font-weight: 500;
   }
+  html[data-theme='dark'] & {
+    border: 1px solid var(--global-divider-color);
+    background: var(--global-card-bg-color);
+    color: var(--global-text-color-light);
+  }
 }
 
 .toc-summary {
   font-size: 1.2em;
   font-weight: bold;
+}
+
+// Pagination
+
+.pagenav {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 0;
+  padding: 5px;
+  background-color: #f8f8f8;
+  border: 1px solid #eaeaea;
+  border-radius: 5px;
+  html[data-theme='dark'] & {
+    background-color: var(--global-card-bg-color);
+    border: 1px solid var(--global-divider-color);
+  }
+}
+
+.smaller-title {
+  font-size: 95%; /* Adjust the percentage as needed */
+}
+
+.previous-post,
+.next-post {
+  flex: 1;
+}
+
+.previous-post {
+  text-align: left;
+}
+
+.next-post {
+  text-align: right;
+}
+
+.previous-post a,
+.next-post a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  border-radius: 1px;
+  transition: background-color 0.3s ease;
 }
