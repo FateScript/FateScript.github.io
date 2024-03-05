@@ -56,19 +56,25 @@ layout: default
   <!-- prev and next blog -->
   {% if page.previous or page.next %}
     <div class="pagenav">
-      <div class="previous-post">
-        {% if page.next %}
-          <span>⬅️</span>
-          <a href="{{ page.next.url }}" class="smaller-title"><strong>{{ page.next.title }}</small></a>
-        {% endif %}
-      </div>
+    {% if page.next %}
+      <a class="previous-post" href="{{ page.next.url}}">
+        <span>⬅️</span><br>
+        <span class="smaller-title"><strong>{{ page.next.title }}</strong></span>
+      </a>
+    {% else %}
+      <a class="previous-post">
+      </a>
+    {% endif %}
 
-      <div class="next-post">
-        {% if page.previous %}
-          <span>➡️</span>
-          <a href="{{ page.previous.url }}" class="smaller-title"><strong>{{ page.previous.title }}</small></a>
-        {% endif %}
-      </div>
+    {% if page.previous %}
+      <a class="next-post" href="{{ page.previous.url }}">
+        <span>➡️</span><br>
+        <span><strong>{{ page.previous.title }}</strong></span>
+      </a>
+    {% else %}
+      <a class="next-post">
+      </a>
+    {% endif %}
     </div>
   {% endif %}
 
