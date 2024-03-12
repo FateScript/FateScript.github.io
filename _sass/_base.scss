@@ -326,6 +326,19 @@ footer.sticky-bottom {
   }
 }
 
+//Links
+a {
+
+  &:visited {
+    color: var(--global-visited-link-color);
+  }
+
+  &:hover {
+    color: var(--global-visited-link-color);
+    text-decoration: underline;
+  }
+}
+
 // Blog
 
 .header-bar {
