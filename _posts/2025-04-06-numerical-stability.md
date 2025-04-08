@@ -343,7 +343,7 @@ $$
 如果直接使用 $x_i$ ，通常会导致 $\exp(x_i)$ 的数值过高而导致overflow，所以更加数值稳定的写法则是：先减去 $\max(x)$的数值，再做softmax操作。也就是：
 
 $$
-\mathrm{softmax}(x_i) = \frac{e^{x_i} - \max(x)}{\sum_j e^{x_j} - \max(x)}
+\mathrm{softmax}(x_i) = \frac{e^{x_i - \max(x)}}{\sum_j e^{x_j - \max(x)}}
 $$
 
 因为softmax的结果算出来是概率，所以通常为了求交叉熵，会有计算log softmax的过程，
