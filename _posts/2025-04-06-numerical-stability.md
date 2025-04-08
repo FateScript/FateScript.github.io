@@ -1,8 +1,8 @@
 ---
 layout: post
-title: 数值稳定：管理误差的艺术
+title: 那些年，我们没想过的数值稳定算法
 date: 2025-04-06 11:59:00-0400
-description: 数学和工程的游戏
+description: 数值稳定：管理误差的艺术
 categories: deep-learning engineering
 tags: [code,]
 giscus_comments: true
