@@ -48,7 +48,7 @@ IEEE754标准在表示浮点数的时候，主要分为三个部分：符号位�
     
 3. **提高精度或改变数值类型** 
     
-    默认情况下，模型使用的是 `float32` / `float16` 来进行训练，但在关键节点上，特别是梯度累加、参数更新等环节，如果使用低精度可能会导致误差误差累积甚至训练不收敛。所以有时候为了达到更好的稳定性，经常会在某些模块中采用更高的精度，或者临时将变量转换成高精度计算再转换回来。比如在混合精度训练中，往往会做loss scaling，或者在某些操作上autocast到 `float32` 以保证训练稳定。
+    默认情况下，模型使用的是 `float32` / `float16` 来进行训练，但在关键节点上，特别是梯度累加、参数更新等环节，如果使用低精度可能会导致误差累积甚至训练不收敛。所以有时候为了达到更好的稳定性，经常会在某些模块中采用更高的精度，或者临时将变量转换成高精度计算再转换回来。比如在混合精度训练中，往往会做loss scaling，或者在某些操作上autocast到 `float32` 以保证训练稳定。
     
 4. **限制输入范围**
     
@@ -98,7 +98,7 @@ print(a / b / b)  # 1e+16
 
 #### Prod
 
-prod是一个tensor中的数值的累乘，也就是 $y = \prod_{i=1} x_i$，对于这个累乘中的任何一个元素 $x_i$ 求导，结果就是 $\text{grad} *  y / x_i$ ，但是因为y是累乘结果，可能会存在非常大或者非常小的情况，因此和div一样，有underflow和overflow的风险，因此一个比较数值稳定的写法应该是 $\text{grad} * (y / x_i)$，这样要比第一种写法要更加数值稳定一些，这也是torch[官方的实现方式](https://github.com/pytorch/pytorch/blob/330c9577a3ce880c49475ca79e517b8741ff225b/torch/csrc/autograd/FunctionsManual.cpp#L825-L826) 。
+prod是一个tensor中的数值的累乘，也就是 $y = \prod_{i=1} x_i$，对于这个累乘中的任何一个元素 $x_i$ 求导，结果就是 $\text{grad} *  y / x_i$ ，但是因为y是累乘结果，可能会存在非常大或者非常小的情况，因此和div一样，有underflow和overflow的风险，因此一个比较数值稳定的写法应该是 $\text{grad} * (y / x_i)$，这也是torch[官方的实现方式](https://github.com/pytorch/pytorch/blob/330c9577a3ce880c49475ca79e517b8741ff225b/torch/csrc/autograd/FunctionsManual.cpp#L825-L826) 。
 
 <br>
 
