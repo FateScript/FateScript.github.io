@@ -2,7 +2,7 @@
 layout: post
 title: LLMs as Markov Chain
 date: 2023-06-03 11:59:00-0400
-description: 看待LLM的新视角
+description: 从马尔可夫链视角理解 LLM 的上下文、采样和行为边界
 categories: engineering
 tags: [math, LLM, ]
 giscus_comments: true

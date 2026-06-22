@@ -2,7 +2,7 @@
 layout: post
 title: 关于炼丹，你是否知道这些细节？
 date: 2021-12-28 11:59:00-0400
-description: 
+description: 深度学习中容易被忽略的工程细节
 categories: deep-learning engineering
 tags: [code,]
 giscus_comments: true

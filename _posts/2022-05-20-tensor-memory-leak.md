@@ -2,7 +2,7 @@
 layout: post
 title: Tensor是如何让你的内存/显存泄漏的
 date: 2022-05-20 11:59:00-0400
-description: 
+description: 从最小复现到计算图
 categories: deep-learning engineering
 tags: [code,]
 giscus_comments: true
