@@ -762,28 +762,72 @@ progress {
  // table of content setting
 
 .toc {
-  margin: 0 2px 40px;
-  border: 1px solid black;
-  background: rgb(178, 180, 186);
-  color: var(--global-text-color); /* Use global text color */
-  border-radius: 8px;
-  padding: .4em;
-  font-size: 15px;
+  background: var(--global-card-bg-color);
+  border: 1px solid var(--global-divider-color);
+  border-radius: 6px;
+  color: var(--global-text-color);
+  font-size: 0.95rem;
+  margin: 0 0 2rem;
+  padding: 0.75rem 0.9rem;
 
-  .details {
-    display: inline;
-    font-weight: 500;
+  .toc-details {
+    margin: 0;
   }
-  html[data-theme='dark'] & {
-    border: 1px solid var(--global-divider-color);
-    background: var(--global-card-bg-color);
+
+  .toc-summary {
+    align-items: center;
+    cursor: pointer;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 600;
+    justify-content: space-between;
+    list-style: none;
+  }
+
+  .toc-summary::-webkit-details-marker {
+    display: none;
+  }
+
+  .toc-summary::after {
     color: var(--global-text-color-light);
+    content: "+";
+    font-weight: 400;
   }
-}
 
-.toc-summary {
-  font-size: 1.2em;
-  font-weight: bold;
+  .toc-details[open] .toc-summary {
+    border-bottom: 1px solid var(--global-divider-color);
+    margin-bottom: 0.75rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .toc-details[open] .toc-summary::after {
+    content: "-";
+  }
+
+  .section-nav {
+    margin: 0;
+    padding-left: 1rem;
+  }
+
+  .toc-entry {
+    line-height: 1.45;
+    margin: 0.25rem 0;
+
+    a {
+      color: var(--global-text-color);
+      text-decoration: none;
+
+      &:hover {
+        color: var(--global-theme-color);
+      }
+    }
+  }
+
+  .toc-h4,
+  .toc-h5,
+  .toc-h6 {
+    font-size: 0.92em;
+  }
 }
 
 // Pagination

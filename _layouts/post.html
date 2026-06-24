@@ -41,12 +41,14 @@ layout: default
 
   <article class="post-content">
     <div>
+      {% if page.toc %}
       <div class="toc">
-        <details>
-          <summary class="toc-summary">Table of Contents</summary>
+        <details class="toc-details">
+          <summary class="toc-summary">目录</summary>
           {% toc %}
         </details>
       </div>
+      {% endif %}
       <div id="markdown-content">
         {{ content }}
       </div>
